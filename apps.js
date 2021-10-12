@@ -41,39 +41,40 @@
 
 async function doMath(){
 try{
+ 
+
     let result = await slowMath.add(6,2)
-    console.log 
+    console.log(result) 
 
     let result2 = await slowMath.multiply(result, 2)
-    console.log
+    console.log(result2)
 
-    let result3 = await slowMath.divide(result, 4)
-    console.log
+    let result3 = await slowMath.divide(result2, 4)
+    console.log(result3)
 
-    let result4 = await slowMath.subtract(result, 3)
-    console.log
+    let result4 = await slowMath.subtract(result3, 3)
+    console.log(result4)
 
-    let result5 = await slowMath.add(result, 98)
-    console.log
+    let result5 = await slowMath.add(result4, 98)
+    console.log(result5)
 
-    let result6 = await slowMath.remainder(result, 2)
-    console.log
+    let result6 = await slowMath.remainder(result5, 2)
+    console.log(result6)
 
-    let result7 = await slowMath.multiply(result, 50)
-    console.log
+    let result7 = await slowMath.multiply(result6, 50)
+    console.log(result7)
 
-    let result8 = await slowMath.remainder(result, 40)
-    console.log
+    let result8 = await slowMath.remainder(result7, 40)
+    console.log(result8)
 
-    let result9 = await slowMath.add(result, 32)
-    console.log
+    let result9 = await slowMath.add(result8, 32)
+    console.log(result9)
 
-    let result10 = console.log("The final result is " + result)
-    
-} catch(err) {console.error(err)}
+} catch(err) {
+    console.error(err)}
 }
-async function error () {
-    await Promise.reject(new Error("An error has been made. Pardon the mistake!"))
-}
+
+doMath()
+
 //I don't know what I have done wrong. It's not doing anything.
-
+//I forgot to number the results and log the result...I just put console.log
